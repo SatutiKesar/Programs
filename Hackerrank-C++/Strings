@@ -5,18 +5,32 @@ using namespace std;
 int main() {
 	// Complete the program
 
-    string a, b;
-    cin>>a>>b;
+    string str1,str2,str3,tmpstr;
+    int a,b;
     
-    cout<<a.size()<<" "<<b.size()<<endl;
+    cin >> str1;
+    cin >> str2;
+    
+    a = str1.size();
+    b = str2.size();
+    
+    tmpstr = str3 = str1+str2;
 
-    cout<<a+b<<endl;
+    char tmpa,tmpb;
 
-    char t1=a[0];
-    char t2=b[0];
-    a[0]=t2;
-    b[0]=t1;
+    tmpa = str3[0];
+    tmpb = str3[a];
 
-    cout<<a<<" "<<b;
+    str3[0] = tmpb;
+    str3[a] = tmpa;
+
+    cout << a << " " << b << endl;
+
+    cout << tmpstr << endl;
+
+    for(int i = 0; i < a;i++)cout << str3[i];
+    cout << " ";
+    for(int i = a; i < str3.size(); i++)cout << str3[i];
+    cout << endl;
     return 0;
 }
